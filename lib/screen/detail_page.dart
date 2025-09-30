@@ -64,7 +64,6 @@ class _DetailPageState extends State<DetailPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Horizontal image list (carousel-like)
             SizedBox(
               height: 220,
               child: ListView.separated(
