@@ -15,7 +15,11 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text("Login Page")),
+        backgroundColor: Colors.blueGrey[100],
+        appBar: AppBar(
+          title: Text("Login Page"),
+          backgroundColor: Colors.blueGrey[200],
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -24,14 +28,10 @@ class _LoginPageState extends State<LoginPage> {
               height: 150,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [Colors.black, Colors.blueGrey],
-                ),
+                color: const Color.fromARGB(255, 209, 231, 241),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.cyan.withOpacity(0.3),
+                    color: Colors.blueGrey.withOpacity(0.3),
                     blurRadius: 20,
                     offset: Offset(0, 10),
                   ),
@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Icon(
                 Icons.account_circle_rounded,
                 size: 80,
-                color: Colors.white,
+                color: Colors.blueGrey[700],
               ),
             ),
             SizedBox(height: 20),
@@ -59,17 +59,21 @@ class _LoginPageState extends State<LoginPage> {
       child: TextFormField(
         // enabled: true,
         controller: usernameC,
-        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        style: TextStyle(
+          color: Colors.blueGrey[800],
+          fontWeight: FontWeight.bold,
+        ),
         decoration: InputDecoration(
           hintText: "Username. . .",
           hintStyle: TextStyle(
-            color: Colors.white,
+            color: Colors.blueGrey[600],
             fontWeight: FontWeight.bold,
           ),
-          fillColor: Colors.blueGrey,
+          fillColor: const Color.fromARGB(255, 209, 231, 241),
           filled: true,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20)),
+            borderSide: BorderSide.none,
           ),
         ),
       ),
@@ -83,17 +87,21 @@ class _LoginPageState extends State<LoginPage> {
         enabled: true,
         obscureText: true,
         controller: passwordC,
-        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        style: TextStyle(
+          color: Colors.blueGrey[800],
+          fontWeight: FontWeight.bold,
+        ),
         decoration: InputDecoration(
           hintText: "Password. . .",
           hintStyle: TextStyle(
-            color: Colors.white,
+            color: Colors.blueGrey[600],
             fontWeight: FontWeight.bold,
           ),
-          fillColor: Colors.blueGrey,
+          fillColor: const Color.fromARGB(255, 209, 231, 241),
           filled: true,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20)),
+            borderSide: BorderSide.none,
           ),
         ),
       ),
@@ -110,8 +118,11 @@ class _LoginPageState extends State<LoginPage> {
           _login();
         },
         style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.blueGrey,
+          foregroundColor: Colors.blueGrey[800],
+          backgroundColor: const Color.fromARGB(255, 209, 231, 241),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
         ),
         child: Text("LOGIN", style: TextStyle(fontWeight: FontWeight.bold)),
       ),

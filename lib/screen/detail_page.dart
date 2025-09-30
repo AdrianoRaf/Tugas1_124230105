@@ -76,13 +76,13 @@ class _DetailPageState extends State<DetailPage> {
                   return Container(
                     width: 340,
                     decoration: BoxDecoration(
-                      color: Colors.blueGrey[200],
-                      borderRadius: BorderRadius.circular(12),
+                      color: const Color.fromARGB(255, 209, 231, 241),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(20),
                         child: Image.network(
                           url,
                           width: 340,
